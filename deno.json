@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "strict": true
+    },
+    "fmt": {
+        "files": {
+            "include": ["*.ts"]
+        },
+        "options": {
+            "indentWidth": 4,
+            "lineWidth": 80
+        }
+    },
+    "tasks": {
+        "test": "deno test --doc $(git ls-files 'test_*.ts')",
+        "fmt": "deno fmt $(git ls-files '*.ts')"
+    }
+}
